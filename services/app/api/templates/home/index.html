@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oryks Systems</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="header">
+        <nav class="navbar">
+            <div class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="" class="avatar"></div>
+            <a href="#" class="toggle-btn">
+                <span class="bar">
+
+                </span>
+                <span class="bar">
+
+                </span>
+                <span class="bar">
+
+                </span>
+            </a>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="" class="active">Join Waitlist</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-section">
+            <h1>Oryks Systems</h1>
+            <p>
+                We identify interesting open-source projects 
+                projects and work with junior software engineers 
+                to help them contribute in order for them to 
+                gain real world experience.
+            </p>
+            <div class="button">
+                <a href="">Join Waitlist</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
