@@ -13,9 +13,7 @@ def home_page():
 @home.route("/join_waitlist", methods=['GET', 'POST'])
 def join_waitlist():
     """Join the waitlist."""
-    # return render_template('home/waitlist.html')
-    error_message = 'The '
     if request.method == 'POST':
         print(request.form)
         return redirect(url_for('home.home_page'))
-    return render_template('resetrequest.html')
+    return render_template('home/waitlist.html')

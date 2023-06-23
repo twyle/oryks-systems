@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oryks Systems</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Join Waitlist</title>
 </head>
-
 <body>
+    
+    <main>
+        <div class="container">
+            <div class="form-box">
 
-    <div class="header">
-        <nav class="navbar">
-            <div class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="" class="avatar"></div>
-            <a href="#" class="toggle-btn">
-                <span class="bar">
+                <h1>Join Waitlist</h1>
 
-                </span>
-                <span class="bar">
+                <form action="" method="post">
+                    <div class="input-group">
 
-                </span>
-                <span class="bar">
+                        {% if error_message %}
+                            <div class="input-field error">
+                                <i class="uil uil-envelope-alt"></i>
+                                <input type="email" name="email" placeholder="EmailError" id="" required>
+                            </div>
+                            <div class="error-msg">
+                                <p>
+                                    {{ error_message }}
+                                </p>
+                            </div>
+                        {% else %}
+                            <div class="input-field">
+                                <i class="uil uil-envelope-alt"></i>
+                                <input type="email" name="email" placeholder="Email" id="" required>
+                            </div>
+                        {% endif %}
 
-                </span>
-            </a>
-            <div class="nav-menu">
-                <ul>
-                    <li><a href="{{ url_for('home.home_page') }}">Home</a></li>
-                    <li><a href="">About</a></li>
-                </ul>
+                    </div>
+
+                    <div class="btn-field">
+                        <button type="submit">Join Waitlist</button>
+                    </div>
+
+                </form>
+
             </div>
-        </nav>
-        <!-- <div class="content-section">
-            <h1>Oryks Systems</h1>
-            <p>
-                We identify interesting open-source projects 
-                projects and work with junior software engineers 
-                to help them contribute in order for them to 
-                gain real world experience.
-            </p>
-            <div class="button">
-                <a href="">Join Waitlist</a>
-            </div>
-        </div> -->
-    </div>
-
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        </div>
+    </main>
 
 </body>
-
 </html>
