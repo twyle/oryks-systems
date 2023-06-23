@@ -29,3 +29,8 @@ def add_user(email_address: str) -> None:
     user = User(email=email_address)
     db_session.add(user)
     db_session.commit()
+    
+def get_waitlist() -> list[User]:
+    """Get users on the waitlist."""
+    users = User.query.all()
+    return users

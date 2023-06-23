@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from .controller import add_to_waitlist
+from .controller import add_to_waitlist, get_waitlist
 
 home = Blueprint("home", __name__)
 
@@ -15,3 +15,8 @@ def home_page():
 def join_waitlist():
     """Join the waitlist."""
     return add_to_waitlist(request)
+
+@home.route("/waitlist", methods=['GET'])
+def waitlist():
+    """List users on waitlist."""
+    return get_waitlist()
