@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
+from .controller import add_to_waitlist
 
 home = Blueprint("home", __name__)
 
@@ -13,7 +14,4 @@ def home_page():
 @home.route("/join_waitlist", methods=['GET', 'POST'])
 def join_waitlist():
     """Join the waitlist."""
-    if request.method == 'POST':
-        print(request.form)
-        return redirect(url_for('home.home_page'))
-    return render_template('home/waitlist.html')
+    return add_to_waitlist(request)
