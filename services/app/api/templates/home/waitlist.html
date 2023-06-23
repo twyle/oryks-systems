@@ -26,13 +26,12 @@
             </a>
             <div class="nav-menu">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="{{ url_for('home.home_page') }}">Home</a></li>
                     <li><a href="">About</a></li>
-                    <li><a href="{{ url_for('home.join_waitlist') }}" class="active">Join Waitlist</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="content-section">
+        <!-- <div class="content-section">
             <h1>Oryks Systems</h1>
             <p>
                 We identify interesting open-source projects 
@@ -41,9 +40,9 @@
                 gain real world experience.
             </p>
             <div class="button">
-                <a href="{{ url_for('home.join_waitlist') }}">Join Waitlist</a>
+                <a href="">Join Waitlist</a>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
